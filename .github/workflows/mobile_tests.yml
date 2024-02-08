@@ -15,6 +15,9 @@ jobs:
           npm install -g appium
           appium &>/dev/null &
 
+      - name: Install appium driver
+        run: appium driver install uiautomator2
+
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
